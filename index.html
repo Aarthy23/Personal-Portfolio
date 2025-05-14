@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Jquery script Menu Toggle -->
+    <script>
+        $(window).resize(function () {
+          if ($(window).width() > 600) {
+              $(".nav-links").show(); 
+          } else {
+              $(".nav-links").hide(); 
+              }
+          });
+          
+  
+          
+       $(document).ready(function () {
+          $(".menu-toggle").click(function () {
+            $(".nav-links").slideToggle();
+          });
+        });
+    </script>    
+</head>
+<body>
+  <div class="menu-toggle">&#9776;</div>
+
+  <!-- Entire fixed container -->
+  <div class="fixed-container">
+      <!-- Picture -->
+      <div class="pic">
+          <img src="image.jpg" class="image">
+      </div>
+ 
+        <!-- Open to Opportunities -->
+          <div class="open-to-opportunities"><i class="fa-solid fa-square-check"></i> Open to Opportunities</div>
+    
+                <!-- Nav bar div -->
+                  <!-- nav links -->
+              <div class="nav-links">
+                  <div id="home"><a href="#home-page-content"><i class="fa-solid fa-house"></i>  Home</a></div>
+                  <div id="about"><a href="#about-page-content"><i class="fa-solid fa-circle-user"></i>  About</a></div>
+                  <div id="skills"><a href="#skills-page-content"><i class="fa-solid fa-graduation-cap"></i>  Skills</a></div>
+                  <div id="projects"><a href="#projects-page-content"><i class="fa-solid fa-list-check"></i>  Projects</a></div>
+                  <div id="contact"><a href="#contact-page-content"><i class="fa-solid fa-envelope"></i>  Contact</a></div>
+              </div>
+ </div>
+
+
+ <!-- 1) Home page Content -->
+
+<div class="home-page-content" id="home-page-content">
+    <div class="welcome">
+      Glad to have you here! <i class="fa-solid fa-wand-magic-sparkles" id="magic-icon"></i>
+    </div>
+
+        <div class="name">
+          I'm <span style="color: #ffd43b">Aarthy</span>
+        </div> <br /> <br />
+
+            <div class="budding">
+              Budding <span style="color: red" class="job-role">Python Developer</span>
+            </div>
+
+                <div class="sentence1">
+                    Turning <span style="color: #ffd43b">logic</span> into
+                    <span style="color: #ffd43b">magic</span> with
+                    <span style="color: red">Python !!!!</span>
+                </div><br><br>
+
+                    <div class="sentence2">
+                        An enthusiastic Python developer at the start of an exciting 
+                            journey—eager to learn, build, and contribute to real-world projects with meaningful code
+                    </div>
+
+
+              <!-- Location -->
+                  <p class="location"><i class="fa-solid fa-location-dot">  <span style="color:  rgba(128, 128, 128, 0.999); font-size: 14px; 
+                      font-family: monospace, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
+                      Geneva, Verdana, sans-serif, Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">Coimbatore, TamilNadu .................................
+                                      <a href="#about-page-content"><button class="a-btn">More About me </button></a></span></i> </p>
+                  
+                  <p class="location-hide"><i class="fa-solid fa-location-dot">  <span style="color:  rgba(128, 128, 128, 0.999); font-size: 14px; 
+                      font-family: monospace, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 
+                      Geneva, Verdana, sans-serif, Tahoma, Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">Coimbatore, TamilNadu...............
+                                      <a href="#about-page-content"><button class="a-btn">More About me </button></a></span></i> </p>
+
+
+</div>
+
+
+<!-- Jquery script -->
+<script>
+  $(document).ready(function () {
+    text1 = $(".job-role").text(); // Get existing text from the element
+    i = 0;
+
+    $(".job-role").text(""); // Clear it before typing starts
+
+    function typeWriter() {
+      if (i < text1.length) {
+        $(".job-role").append(text1.charAt(i++));
+        setTimeout(typeWriter, 100);
+      } else {
+        setTimeout(() => {
+          $(".job-role").html("");
+          i = 0;
+          typeWriter();
+        }, 1500);
+      }
+    }
+
+    typeWriter();
+  });
+</script>
+
+<!-- 1) End of Home page Content -->
+
+
+<!-- 2) About page Content -->
+<div class="about-page-content" id="about-page-content">
+  <div class="know-me">
+    Get to Know Me!<i class="fa-solid fa-circle-user" id="about-icon"></i>
+  </div>
+          <div class="about-sentence">
+          I'm Aarthy — a budding Python Full Stack Developer with hands-on skills
+          in Django,
+          <br />front-end technologies (HTML, CSS, JavaScript, jQuery), and
+          database management using SQL. <br />
+          I'm passionate about web development and aim to contribute to impactful
+          projects. <br />I thrive on problem-solving and clean code.
+          </div>
+
+              <div class="about-sentence-hide">
+              I'm Aarthy — a budding Python Full Stack Developer with hands-on skills
+              in Django, front-end technologies <br> (HTML, CSS, JavaScript, jQuery), and
+              database management using SQL. <br />
+              I'm passionate about web development and aim to contribute to impactful
+              projects. I thrive on problem-solving and clean code.
+              </div>
+
+                  <div class="education">Education</div>
+
+                      <div class="clg">
+                          <i class="fa-solid fa-graduation-cap"></i> Bachelor's Degree in
+                          <span style="color: rgb(222, 222, 2)">Computer Applications</span>
+                      </div>
+                      <div class="clg-name">
+                          Bishop Heber College, Tiruchirapalli ; 2021 - 2024
+                      </div>
+
+                          <div class="schl1">
+                              <i class="fa-solid fa-graduation-cap"></i>
+                              <span style="color: rgb(222, 222, 2)">Higher Secondary</span> Education
+                          </div>
+                          <div class="schl1-name">
+                              Sri Ramakrishna Matric Hr Sec School, Perambalur ; 2020 - 2021
+                          </div>
+
+                                  <div class="schl2">
+                                      <i class="fa-solid fa-graduation-cap"></i>
+                                      <span style="color: rgb(222, 222, 2)">Secondary</span> Education
+                                  </div>
+                                  <div class="schl2-name">
+                                      Arasunagar Matric Hr Sec School, Ariyalur ; 2018 - 2019
+                                  </div>
+</div>
+
+<!-- 2) End of About page Content -->
+
+<!-- 3) Skills page Content -->
+   
+<div class="skills-page-content" id="skills-page-content">
+  <div class="tools">
+    The Tools Behind My Work
+    <i class="fa-solid fa-graduation-cap" id="tools-icon"></i>
+  </div>
+  <br />
+
+  <!-- 1) PYTHON -->
+  <div class="python-grid">
+    <div class="py-icon-grid"><i class="fa-brands fa-python"></i></div>
+    <div class="py-content-grid">
+      <p class="py-heading">
+        Python <br /><span class="py-subheading">Backend Logic and Functionality</span>
+        <br /><span class="py-sentence">I built my backend logic and automated tasks using Python. I
+          developed my scalable web apps with Django.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2) HTML -->
+  <div class="html-grid">
+    <div class="html-icon-grid"><i class="fa-brands fa-html5"></i></div>
+    <div class="html-content-grid">
+      <p class="html-heading">
+        HTML <br /><span class="html-subheading">Structure and Content</span>
+        <br /><span class="html-sentence">I structured my web content using semantic HTML5 tags. It formed
+          the base layout of all my websites.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 3) CSS -->
+  <div class="css-grid">
+    <div class="css-icon-grid"><i class="fa-brands fa-css3-alt"></i></div>
+    <div class="css-content-grid">
+      <p class="css-heading">
+        CSS <br /><span class="css-subheading">Styling and Layout</span>
+        <br /><span class="css-sentence">I styled my web pages with CSS3 to create responsive, modern
+          interfaces. I used Flexbox and Grid to design my layouts.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 4) JAVASCRIPT -->
+  <div class="javascript-grid">
+    <div class="javascript-icon-grid"><i class="fa-brands fa-js"></i></div>
+    <div class="javascript-content-grid">
+      <p class="javascript-heading">
+        JAVASCRIPT <br /><span class="javascript-subheading">Client-Side Interactivity</span>
+        <br /><span class="javascript-sentence"
+          >I used JavaScript to add interactivity to my websites. It powered
+          my dynamic features and form validations.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 5) JQUERY -->
+  <div class="jquery-grid">
+    <div class="jquery-icon-grid">
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+    </div>
+    <div class="jquery-content-grid">
+      <p class="jquery-heading">
+        JQUERY <br /><span class="jquery-subheading">Simplified Scripting</span>
+        <br /><span class="jquery-sentence">I simplified my scripting with jQuery for tasks like DOM
+          manipulation. It improved my UI interactions.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 6) DJANGO -->
+  <div class="django-grid">
+    <div class="django-icon-grid"><i class="fa-solid fa-gear"></i></div>
+    <div class="django-content-grid">
+      <p class="django-heading">
+        DJANGO <br /><span class="django-subheading">Web Application Framework</span>
+        <br /><span class="django-sentence">I used Django to build my full-stack web applications. It managed
+          my routing, templates, and database models.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 7) SQL -->
+  <div class="sql-grid">
+    <div class="sql-icon-grid"><i class="fa-solid fa-database"></i></div>
+    <div class="sql-content-grid">
+      <p class="sql-heading">
+        SQL <br /><span class="sql-subheading">Data Handling and Queries</span>
+        <br /><span class="sql-sentence">I handled my database operations using SQL. I ran queries and
+          managed my data with MySQL.
+        </span>
+      </p>
+    </div>
+  </div>
+
+</div>
+<!-- 3) End of Skills page Content -->
+
+<!-- 4) Projects  page Content -->
+
+<div class="projects-page-content" id="projects-page-content">
+  <div class="proj-gallery">
+    My Project Gallery
+    <i class="fa-solid fa-list-check" id="proj-gallery-icon"></i>
+    <p class="decs-hide">Just tap the picture to explore the GitHub code!</p>
+  </div>
+  <br />
+
+  <!-- Projects -->
+  <div class="projects-grid">
+    <!-- Project 1 -->
+     
+    <div class="proj1">
+      <img src="proj_img1.jpg" class="proj1-img" />
+      <p class="proj1-heading">Employee Management System</p>
+      <p class="proj1-desc">
+        Python (OOP): A CLI-based system to manage employee records using
+        classes, objects, and basic OOP principles in Python.
+      </p>
+      <a
+        href="https://github.com/Aarthy23/Employee-Management-System-Python"
+        target="_blank"
+      >
+        <p class="proj1-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+
+    <!-- Project 2 -->
+    <div class="proj2">
+      <img src="proj_img2.jpg" class="proj2-img" />
+      <p class="proj2-heading">Bus Reservation System</p>
+      <p class="proj2-desc">
+        Python (OOP): A console-based system to manage buses, book tickets,
+        and handle passenger data using Python classes and OOP concepts.
+      </p>
+
+      <a
+        href="https://github.com/Aarthy23/Bus-Reservation-System-Python"
+        target="_blank"
+      >
+        <p class="proj2-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="proj3">
+      <img src="proj_img3.jpg" class="proj3-img" />
+      <p class="proj3-heading">HTML & CSS (Grid)</p>
+      <p class="proj3-desc">
+        Style Trio : A collection of my practice projects and progress in
+        HTML and CSS, including a CSS Grid-based mini eCommerce webpage to
+        enhance front-end development skills.
+      </p>
+
+      <a href="https://github.com/Aarthy23/HTML-CSS-Grid" target="_blank">
+        <p class="proj3-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="proj4">
+      <img src="proj_img4.jpg" class="proj4-img" />
+      <p class="proj4-heading">HTML & CSS (Flex)</p>
+      <p class="proj4-desc">
+        GradeUp Hub : A responsive static landing page built with HTML and
+        CSS Flexbox, showcasing structured layouts, service sections, and
+        form design to master Flexbox concepts.
+      </p>
+
+      <a href="https://github.com/Aarthy23/HTML-CSS-Flex" target="_blank">
+        <p class="proj4-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+     <!-- Project 5 -->
+     <div class="proj5">
+      <img src="proj_img5.jpg" class="proj5-img" />
+      <p class="proj5-heading">Simple Calculator</p>
+      <p class="proj5-desc">
+        JavaScript Mini Project : A basic, responsive calculator that performs arithmetic operations
+        using JavaScript DOM manipulation and event handling for live interactivity.
+      </p>
+
+      <a href="https://github.com/Aarthy23/Simple-Calculator-Javascript" target="_blank">
+        <p class="proj5-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="proj6">
+      <img src="proj_img6.jpg" class="proj6-img" />
+      <p class="proj6-heading">Form Validation</p>
+      <p class="proj6-desc">
+        JavaScript Mini Project : A user registration form with real-time validation using JavaScript, 
+        DOM manipulation, and regular expressions to ensure accurate user input before submission.
+      </p>
+
+      <a href="https://github.com/Aarthy23/Form-Validation-Javascript" target="_blank">
+        <p class="proj6-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+     <!-- Project 7 -->
+     <div class="proj7">
+      <img src="proj_img7.jpg" class="proj7-img" />
+      <p class="proj7-heading">Form Access(signup and login)</p>
+      <p class="proj7-desc">
+        JavaScript Mini Project :A dual signup and login form with real-time JavaScript validation,
+         DOM manipulation, and smooth page transitions using jQuery.
+      </p>
+
+      <a href="https://github.com/Aarthy23/Form-Access-Javascript" target="_blank">
+        <p class="proj7-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+
+    <!-- Project 8 -->
+    <div class="proj8">
+      <img src="proj_img8.jpg" class="proj8-img" />
+      <p class="proj8-heading">Personal Portfolio</p>
+      <p class="proj8-desc">
+        A clean, responsive portfolio built with HTML, CSS, and jQuery to showcase my background, skills, projects, and professional links 
+        with interactive features and smooth animations.
+      </p>
+
+      <a href="https://github.com/Aarthy23/Personal-Portfolio" target="_blank">
+        <p class="proj8-hover">
+          👀 Curious about the code? <br />👉 Click to visit GitHub. <br />
+          <br />
+          <br />
+          <span
+            ><i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i
+          ></span>
+        </p>
+      </a>
+    </div>
+    
+
+
+
+
+
+  </div>
+</div>
+
+     <!-- Jquery script -->
+  <script>
+    // Project 1
+    $(document).ready(function () {
+      $(".proj1").hover(
+        function () {
+          $(this).find(".proj1-img").hide();
+          $(this).find(".proj1-heading").hide();
+          $(this).find(".proj1-desc").hide();
+          $(this).find(".proj1-hover").show();
+        },
+        function () {
+          $(this).find(".proj1-img").show();
+          $(this).find(".proj1-heading").show();
+          $(this).find(".proj1-desc").show();
+          $(this).find(".proj1-hover").hide();
+        }
+      );
+    });
+
+    // Project 2
+    $(document).ready(function () {
+      $(".proj2").hover(
+        function () {
+          $(this).find(".proj2-img").hide();
+          $(this).find(".proj2-heading").hide();
+          $(this).find(".proj2-desc").hide();
+          $(this).find(".proj2-hover").show();
+        },
+        function () {
+          $(this).find(".proj2-img").show();
+          $(this).find(".proj2-heading").show();
+          $(this).find(".proj2-desc").show();
+          $(this).find(".proj2-hover").hide();
+        }
+      );
+    });
+
+    // Project 3
+    $(document).ready(function () {
+      $(".proj3").hover(
+        function () {
+          $(this).find(".proj3-img").hide();
+          $(this).find(".proj3-heading").hide();
+          $(this).find(".proj3-desc").hide();
+          $(this).find(".proj3-hover").show();
+        },
+        function () {
+          $(this).find(".proj3-img").show();
+          $(this).find(".proj3-heading").show();
+          $(this).find(".proj3-desc").show();
+          $(this).find(".proj3-hover").hide();
+        }
+      );
+    });
+
+    // Project 4
+    $(document).ready(function () {
+      $(".proj4").hover(
+        function () {
+          $(this).find(".proj4-img").hide();
+          $(this).find(".proj4-heading").hide();
+          $(this).find(".proj4-desc").hide();
+          $(this).find(".proj4-hover").show();
+        },
+        function () {
+          $(this).find(".proj4-img").show();
+          $(this).find(".proj4-heading").show();
+          $(this).find(".proj4-desc").show();
+          $(this).find(".proj4-hover").hide();
+        }
+      );
+    });
+
+    // Project 5
+    $(document).ready(function () {
+      $(".proj5").hover(
+        function () {
+          $(this).find(".proj5-img").hide();
+          $(this).find(".proj5-heading").hide();
+          $(this).find(".proj5-desc").hide();
+          $(this).find(".proj5-hover").show();
+        },
+        function () {
+          $(this).find(".proj5-img").show();
+          $(this).find(".proj5-heading").show();
+          $(this).find(".proj5-desc").show();
+          $(this).find(".proj5-hover").hide();
+        }
+      );
+    });
+
+    // Project 6
+    $(document).ready(function () {
+      $(".proj6").hover(
+        function () {
+          $(this).find(".proj6-img").hide();
+          $(this).find(".proj6-heading").hide();
+          $(this).find(".proj6-desc").hide();
+          $(this).find(".proj6-hover").show();
+        },
+        function () {
+          $(this).find(".proj6-img").show();
+          $(this).find(".proj6-heading").show();
+          $(this).find(".proj6-desc").show();
+          $(this).find(".proj6-hover").hide();
+        }
+      );
+    });
+
+    // Project 7
+    $(document).ready(function () {
+      $(".proj7").hover(
+        function () {
+          $(this).find(".proj7-img").hide();
+          $(this).find(".proj7-heading").hide();
+          $(this).find(".proj7-desc").hide();
+          $(this).find(".proj7-hover").show();
+        },
+        function () {
+          $(this).find(".proj7-img").show();
+          $(this).find(".proj7-heading").show();
+          $(this).find(".proj7-desc").show();
+          $(this).find(".proj7-hover").hide();
+        }
+      );
+    });
+
+    // Project 8
+    $(document).ready(function () {
+      $(".proj8").hover(
+        function () {
+          $(this).find(".proj8-img").hide();
+          $(this).find(".proj8-heading").hide();
+          $(this).find(".proj8-desc").hide();
+          $(this).find(".proj8-hover").show();
+        },
+        function () {
+          $(this).find(".proj8-img").show();
+          $(this).find(".proj8-heading").show();
+          $(this).find(".proj8-desc").show();
+          $(this).find(".proj8-hover").hide();
+        }
+      );
+    });
+  </script>
+  <!-- 4) End of Projects  page Content -->
+
+
+
+  <!-- 5) Contact page Content -->
+  <div class="contact-page-content" id="contact-page-content">
+    <div class="connect">
+      Let's Connect!<i
+        class="fa-solid fa-hand-holding-heart"
+        id="connect-icon"
+      ></i>
+    </div>
+    <br />
+
+    <!-- Message me  div-->
+    <div class="contact-flex">
+      <div class="left-side">
+        <p class="msg-me">Message Me</p>
+
+        <form class="contact-form">
+          <input type="text" id="name" placeholder="Name" />
+          <input type="text" id="email" placeholder="Email" /> <br />
+          <p id="drop">Drop a message here...!</p>
+          <textarea id="msg" placeholder="Write a message..."></textarea>
+          <br /><br />
+
+          <button type="submit" id="submit">Send Message</button>
+        </form>
+      </div>
+      <!-- end of left side -->
+
+      <div class="right-side">
+        <p class="con">Contact</p>
+        <p class="mail">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:aarthysm23@gmail.com" target="_blank"
+            >aarthysm23@gmail.com</a
+          >
+        </p>
+        <p class="phn">
+          <i class="fa-solid fa-phone-volume"></i>
+          <a href="tel:+1234567890" target="_blank">Schedule a Call</a>
+        </p>
+
+        <p class="pp">Professional Profiles</p>
+
+        <section class="pp-icons">
+          <a href="https://www.linkedin.com/in/aarthy-" target="_blank"
+            ><i class="fa-brands fa-linkedin" id="ln"></i
+          ></a>
+          <a href="https://github.com/Aarthy23" target="_blank"
+            ><i class="fa-brands fa-square-github" id="gh"></i
+          ></a>
+        </section>
+      </div>
+      <!-- end of right side -->
+    </div>
+    <!-- end of entire flex -->
+  </div>
+  <!-- 5) End of Contact  page Content -->  
+</body>
+</html>
+
